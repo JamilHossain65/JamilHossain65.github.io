@@ -50,5 +50,10 @@ def convertSpeech():
 def getUser():
     return jsonify({'courses':courses})
 
+@app.route('/')
+def hello_world():
+    print("This will print Hello, World!")
+    return 'Hello, World!'
+
 app.run()
 
