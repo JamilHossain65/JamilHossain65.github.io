@@ -15,6 +15,12 @@ if not os.path.exists(UPLOAD_DIRECTORY):
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_DIRECTORY
 
+courses = [
+{'id':"0",'name':"Jamil"},
+{'id':"1",'name':"Aliyar"},
+{'id':"2",'name':"Eti"},
+]
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -39,5 +45,10 @@ def convertSpeech():
        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     
     return jsonify({'convert text':getText(filename)})
+
+@app.route('/user/list', methods=['GET'])
+def getUser():
+    return jsonify({'courses':courses})
+
 app.run()
 
