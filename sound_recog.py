@@ -2,7 +2,7 @@ import os
 import speech_recognition as sr
 #from flask import Flask, request, abort, jsonify, send_from_directory
 
-from flask import Flask, flash, request, redirect, url_for,jsonify
+from flask import Flask, flash, request, redirect, url_for,jsonify, render_template
 from werkzeug.utils import secure_filename
 
 #https://www.youtube.com/watch?v=BNBjJ5AvTG0
@@ -54,6 +54,10 @@ def getUser():
 def hello_world():
     print("This will print Hello, World!")
     return 'Hello, World!'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 app.run()
 
