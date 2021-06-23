@@ -55,9 +55,5 @@ def hello_world():
     print("This will print Hello, World!")
     return 'Hello, World!'
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 app.run()
 
