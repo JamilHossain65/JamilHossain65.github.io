@@ -3,8 +3,8 @@
       "alert_title":"Delete App",
       "ok_button":"Ok",
       "alert_message":"Kindly delete this app",
-      "is_force_update":true,
-      "app_link":""
+      "is_force_update":false,
+      "app_link":"https://itunes.apple.com/us/app/thai-keyboard-%E0%B8%A3%E0%B8%A7%E0%B8%94%E0%B9%80%E0%B8%A3-%E0%B8%A7/id1231786723?mt=8"
    },
    "japanese_keyboard":{
       "alert_title":"Update App",
