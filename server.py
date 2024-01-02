@@ -4,4 +4,4 @@ from simple_http_server import route, server
 def index():
     return {"Jamil": "Hossaain"}   
 
-server.start(port=9090)
+server.start()
